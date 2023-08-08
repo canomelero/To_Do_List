@@ -36,7 +36,7 @@
 
 .contenedor {
     height: auto;
-    width: 50%;
+    width: 55%;
     margin-top: 50px;
 
     display: grid;
@@ -48,12 +48,19 @@
     font-size: 25px;
 }
 
+.formulario {
+    width: 100%;
+}
+
 .formulario textarea{
     width: 100%;
     border: 1px solid rgb(25, 149, 187);
     border-radius: 5px;
     margin: 7px 0 15px 0;
     height: 9vh;
+    padding: 10px;
+    font-size: 15px;
+    box-sizing: border-box;     /*Para que no se salga el textarea del contenedor "formulario"*/
 }
 
 .formulario input {
@@ -73,4 +80,8 @@
 
 .columna-notas {
     height: auto;
+}
+
+.columna-notas .lista-notas {
+    width: 100%;
 }

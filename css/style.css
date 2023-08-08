@@ -45,7 +45,7 @@
 }
 
 .contenedor h2 {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .formulario {
@@ -85,3 +85,33 @@
 .columna-notas .lista-notas {
     width: 100%;
 }
+
+.lista-notas {
+    font-size: 20px;
+    margin-top: 7px;
+    width: 100%;
+}
+
+.lista-notas li {
+    margin-bottom: 5px;
+}
+
+.error {
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.borrar-nota, .borrar-nota:hover {
+    display: block;
+    float: right;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+

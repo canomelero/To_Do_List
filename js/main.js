@@ -48,19 +48,31 @@ function rellenarHTML() {
     
     if(arrayNotas.length >= 1) {
         arrayNotas.forEach((nota) => {
-            const li_notas = document.createElement("li");
-            li_notas.textContent = nota.nota;
+            const li_nota = document.createElement("li");
+            li_nota.textContent = nota.nota;
 
             const borrar_nota = document.createElement("a");
             borrar_nota.textContent = "X";
             borrar_nota.classList.add('borrar-nota');
-            li_notas.appendChild(borrar_nota);
+            li_nota.appendChild(borrar_nota);
 
-            lista_notas.appendChild(li_notas);
+            borrar_nota.onclick = () => {     // si hacemos click 
+                borrarNota(nota.id);
+            };
+
+            lista_notas.appendChild(li_nota);
         });
     }
     
     cargarLocalStorage();
+}
+
+function borrarNota(id_nota) {
+    arrayNotas = arrayNotas.filter((nota) => {
+        return nota.id !== id_nota;
+    });
+
+    rellenarHTML();
 }
 
 function error(mensaje) {

@@ -15,7 +15,8 @@ texto.addEventListener('input', (evento) => {
 btnAgregar.addEventListener('click', agregar);
 
 document.addEventListener('DOMContentLoaded', () => {
-    arrayNotas = JSON.parse(localStorage.getItem("notas"));
+    /* Si la primera que vez carga la página web el local storage está vacío, se asigna un array vacío al dato "arrayCarrito" */
+    arrayNotas = JSON.parse(localStorage.getItem("notas")) || [];
     console.log(arrayNotas);
     rellenarHTML();
 })
